@@ -5,35 +5,43 @@ import './Library.css';
 const mockLibraries = [
   {
     "id": 1,
-    "first_name": "John",
-    "last_name": "Doe",
-    "email": "johndoe@abc.com",
-    "gender": "Male",
-    "status": "Terminated"
+    "slug": "https://www.youtube.com/watch?v=3rsyuK-OQ74",
+    "imagelink": "https://yt3.ggpht.com/ytc/AAUvwnhSCFCQHP_7z2CpkOKl6CH5Z1lw5mwHpkkLQKdbGQ=s900-c-k-c0x00ffffff-no-rj",
+    "tilte": "Best food in town",
+    "note": "for people who love to eat",
+    "category": "Food",
+    "subcategory": "To Read",
+    "tags": ["series, movie"]
   },
   {
     "id": 2,
-    "first_name": "Jane",
-    "last_name": "Doe",
-    "email": "janedoe@abc.com",
-    "gender": "Female",
-    "status": "New"
+    "slug": "https://www.youtube.com/watch?v=3rsyuK-OQ74",
+    "imagelink": "https://yt3.ggpht.com/ytc/AAUvwnhSCFCQHP_7z2CpkOKl6CH5Z1lw5mwHpkkLQKdbGQ=s900-c-k-c0x00ffffff-no-rj",
+    "tilte": "Welcome to NY",
+    "note": "for people who love to eat",
+    "category": "Food",
+    "subcategory": "To Read",
+    "tags": ["series, movie"]
   },
   {
     "id": 3,
-    "first_name": "Alice",
-    "last_name": "Doe",
-    "email": "alicedoe@abc.com",
-    "gender": "Female",
-    "status": "Leaving"
+    "slug": "https://www.youtube.com/watch?v=3rsyuK-OQ74",
+    "imagelink": "https://yt3.ggpht.com/ytc/AAUvwnhSCFCQHP_7z2CpkOKl6CH5Z1lw5mwHpkkLQKdbGQ=s900-c-k-c0x00ffffff-no-rj",
+    "tilte": "Food truck",
+    "note": "for people who love to eat",
+    "category": "Food",
+    "subcategory": "To Read",
+    "tags": ["series, movie"]
   },
   {
     "id": 4,
-    "first_name": "Bob",
-    "last_name": "Doe",
-    "email": "bobdoe@abc.com",
-     "gender": "Male",
-    "status": "Active"
+    "slug": "https://www.youtube.com/watch?v=3rsyuK-OQ74",
+    "imagelink": "https://yt3.ggpht.com/ytc/AAUvwnhSCFCQHP_7z2CpkOKl6CH5Z1lw5mwHpkkLQKdbGQ=s900-c-k-c0x00ffffff-no-rj",
+    "tilte": "Best grill checken",
+    "note": "for people who love to eat",
+    "category": "Food",
+    "subcategory": "To Read",
+    "tags": ["series, movie"]
   }
 ]
 
@@ -41,7 +49,7 @@ const LibraryPage = () => {
   const [libraries, setLibraries] = useState([]);
   
   /**
-    * Fetch Data & Set it to libraries
+    * Fetch API & Set libraries state to data
     */
   // const libraryURL = "../../assets/fakedb.json";
   // useEffect(() => {
@@ -64,6 +72,8 @@ const LibraryPage = () => {
     setLibraries(mockLibraries);
   },[])
 
+  // TODO: handle loading 
+  // TODO: handle error message
   return (
     <div>
       This is a Library page
