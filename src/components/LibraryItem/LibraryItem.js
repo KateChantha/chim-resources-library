@@ -2,7 +2,7 @@ import './LibraryItem.css';
 
 const LibraryItem = ({ item }) => {
   console.log("ITEM:", item)
-  const {slug, imagelink, tilte , note, subcategory, tags} = item;
+  const {linkURL, imagelink, tilte , note, subcategory, tags} = item;
   
   return (
     <div className="library-item-container">
