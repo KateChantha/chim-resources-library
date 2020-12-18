@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import LibraryList from '../../components/LibraryList/LibrayList';
 import './Library.css';
 
 const mockLibraries = [
@@ -40,7 +41,7 @@ const LibraryPage = () => {
   const [libraries, setLibraries] = useState([]);
   
   /**
-    * Fetch Data
+    * Fetch Data & Set it to libraries
     */
   // const libraryURL = "../../assets/fakedb.json";
   // useEffect(() => {
@@ -66,6 +67,7 @@ const LibraryPage = () => {
   return (
     <div>
       This is a Library page
+      <LibraryList libraries={libraries} />
     </div>
   )
 }
