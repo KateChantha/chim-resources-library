@@ -20,7 +20,7 @@ function App() {
           <Route path="/tools" component={LibraryPage}></Route>
           <Route path="/opportunities" component={LibraryPage}></Route>
           <Route path="/influencers" component={LibraryPage}></Route>
-          <Route path="/ransom" component={LibraryPage}></Route>
+          <Route path="/random" component={LibraryPage}></Route>
           {/* <Route component={PageNotFound}></Route> */}
         </Switch>
       </Router>  

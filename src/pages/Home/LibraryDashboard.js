@@ -1,25 +1,16 @@
 import { Link } from 'react-router-dom';
-import { Navbar, Nav, Card, Container } from 'react-bootstrap';
+import { Nav, Card, Container } from 'react-bootstrap';
 
 const LibraryDashboard = () => {
-  const libraryDashboardList = ["Food","Margeting", "Media", "Software", "Operations", "Tools", "Opportunities", "Influencers", "Reandom" ]
+  const libraryDashboardList = ["food","marketing", "media", "software", "operations", "tools", "opportunities", "influencers", "random" ]
 
   return (
-    // <Container>
-    //   {libraryDashboardList.map((library, idx) => (
-    //     <Card key={`${library}-${idx}`} className="m-3">
-    //       <h4>{library}</h4>
-    //     </Card>
-    //   ))}
-    // </Container>
-
     <Container>
-     
-        
-          <Nav.Link as={Link} to="/food">Food Library</Nav.Link>
-          <Nav.Link as={Link} to="/marketing">Marketing Library</Nav.Link>
-        
-     
+      {libraryDashboardList.map((library, idx) => (
+        <Card key={`${library}-${idx}`} className="m-3">
+        <Nav.Link as={Link} to={`/${library}`}>{`${library.toUpperCase()} LIBRARY`}</Nav.Link>
+        </Card>
+      ))}
     </Container>
   )
 };
