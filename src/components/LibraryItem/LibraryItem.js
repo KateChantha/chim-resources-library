@@ -1,16 +1,25 @@
+import { Card, Breadcrumb } from 'react-bootstrap';
 import './LibraryItem.css';
 
 const LibraryItem = ({ item }) => {
   console.log("ITEM:", item)
   const {linkURL, imagelink, tilte , note, subcategory, tags} = item;
   
+  // TODO: Add Link component to redirect to source linkURL
   return (
     <div className="library-item-container">
-      <img src={imagelink} alt={tilte} width="150px" />
-      <h5>add source link</h5>
-      <h3>{tilte}</h3>
-      <h5>{note}</h5>
-      <h6>tags</h6>
+      <Card className="m-2">
+        <Card.Img src={imagelink} alt={tilte} />
+        <Card.Body>
+          <Card.Title>{tilte}</Card.Title>
+          <Card.Text>{note}</Card.Text>
+          <Breadcrumb>
+            <Breadcrumb.Item>{tags[0]}</Breadcrumb.Item>
+            <Breadcrumb.Item>{tags[1]}</Breadcrumb.Item>
+          </Breadcrumb>
+          <h6>TODO: add source link</h6>
+        </Card.Body>
+      </Card>
     </div>
   )
 }
