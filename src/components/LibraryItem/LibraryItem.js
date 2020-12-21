@@ -6,6 +6,7 @@ const LibraryItem = ({ item }) => {
   const {linkURL, imagelink, tilte , note, subcategory, tags} = item;
   
   // TODO: Add Link component to redirect to source linkURL
+  // TODO: make card responsive at lg={6}
   return (
     <div className="library-item-container">
       <Card className="m-2">

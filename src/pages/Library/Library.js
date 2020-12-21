@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import LibraryForm from '../../components/LibraryForm/LibraryForm';
 import LibraryList from '../../components/LibraryList/LibrayList';
 import './Library.css';
 
@@ -108,7 +109,9 @@ const LibraryPage = () => {
   // TODO: handle error message
   return (
     <div>
-      This is a Library page
+      <h1>This is a Library page</h1>
+
+      <LibraryForm />
       <LibraryList libraries={libraries} />
     </div>
   )
