@@ -21,7 +21,7 @@ const LibraryForm = () => {
           <Form.Control  type="text" placeholder="Image URL"></Form.Control>
           <Form.Label>Tag</Form.Label>
           <Form.Control  type="text" placeholder="Tag"></Form.Control>
-          <Button className="m-2" variant="secondary" type="submit">Add Resource</Button>
+          <Button className="m-2" variant="secondary" type="submit">Submit and Create Resource</Button>
       </Form>
     </Container>
    
