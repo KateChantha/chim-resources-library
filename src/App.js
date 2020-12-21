@@ -1,7 +1,9 @@
+import { Fragment } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import HomeDashboard from './pages/Home/HomeDashboard';
 import LibraryPage from './pages/Library/Library';
 import './App.css';
-import { Fragment } from 'react';
+
 
 function App() {
   return (
@@ -9,7 +11,7 @@ function App() {
       <div>HEADER / NAV PLACE HOLDER</div>
       <Router>
         <Switch>
-          <Route exact path="/" component={LibraryPage}></Route>
+          <Route exact path="/" component={HomeDashboard}></Route>
           <Route path="/food" component={LibraryPage}></Route>
           <Route path="/marketing" component={LibraryPage}></Route>
           <Route path="/media" component={LibraryPage}></Route>
