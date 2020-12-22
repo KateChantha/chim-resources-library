@@ -18,7 +18,7 @@ const LibraryItem = ({ item }) => {
             <Breadcrumb.Item>{tags[0]}</Breadcrumb.Item>
             <Breadcrumb.Item>{tags[1]}</Breadcrumb.Item>
           </Breadcrumb>
-          <h6>TODO: add source link</h6>
+          <a href={linkURL} target="_blank" rel="noopener noreferrer">Learn More</a>
         </Card.Body>
       </Card>
     </div>
