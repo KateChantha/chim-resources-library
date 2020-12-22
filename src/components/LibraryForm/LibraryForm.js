@@ -4,7 +4,6 @@ const LibraryForm = () => {
   return (
     <Container>
        <Form>
-        <Form.Text>Please fill out resource info</Form.Text>
         <Form.Group controlId="formCategory">
           <Form.Label>Category</Form.Label>
           <Form.Control type="text" placeholder="Category"></Form.Control>

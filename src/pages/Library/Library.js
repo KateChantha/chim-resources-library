@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Button, Modal } from 'react-bootstrap';
 import LibraryForm from '../../components/LibraryForm/LibraryForm';
 import LibraryList from '../../components/LibraryList/LibrayList';
 import './Library.css';
@@ -48,7 +49,10 @@ const mockLibraries = [
 
 const LibraryPage = () => {
   const [libraries, setLibraries] = useState([]);
-  
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   /**
     * Get Liabrary from API
     * and Set libraries state to data
@@ -111,8 +115,26 @@ const LibraryPage = () => {
     <div>
       <h1>This is a Library page</h1>
 
-      <LibraryForm />
+      
+      <Button className="m-3" onClick={handleShow}>Add Resource</Button>
       <LibraryList libraries={libraries} />
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Please fill out resource info</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <LibraryForm />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Submit and Create Resource
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   )
 }
